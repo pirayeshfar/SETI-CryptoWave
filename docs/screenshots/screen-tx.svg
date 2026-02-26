@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#0a1a0a"/>
+      <stop offset="100%" style="stop-color:#050a05"/>
+    </radialGradient>
+    <filter id="glowG">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="scan" patternUnits="userSpaceOnUse" width="100%" height="4">
+      <rect width="100%" height="2" fill="rgba(0,50,0,0.1)"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGrad)"/>
+  <rect width="800" height="600" fill="url(#scan)"/>
+  
+  <!-- Border -->
+  <rect x="10" y="10" width="780" height="580" fill="none" stroke="#1a3a1a" stroke-width="2" rx="5"/>
+  
+  <!-- Header -->
+  <rect x="30" y="25" width="740" height="50" fill="none" stroke="#00ff00" stroke-width="1" rx="3"/>
+  <text x="60" y="55" fill="#00ff00" font-family="monospace" font-size="14">◄ BACK</text>
+  <text x="400" y="55" text-anchor="middle" fill="#00ff00" font-family="monospace" font-size="20" font-weight="bold" filter="url(#glowG)">
+    📡 TRANSMITTER MODE — TX
+  </text>
+  <text x="720" y="55" text-anchor="middle" fill="#00aa00" font-family="monospace" font-size="10">■ ACTIVE</text>
+  
+  <!-- Secret Message Panel -->
+  <rect x="30" y="90" width="740" height="130" fill="#0a150a" stroke="#00ff00" stroke-width="1" rx="3"/>
+  <!-- Corner decorations -->
+  <path d="M30,100 L30,90 L40,90" fill="none" stroke="#00ff00" stroke-width="2"/>
+  <path d="M770,100 L770,90 L760,90" fill="none" stroke="#00ff00" stroke-width="2"/>
+  <path d="M30,210 L30,220 L40,220" fill="none" stroke="#00ff00" stroke-width="2"/>
+  <path d="M770,210 L770,220 L760,220" fill="none" stroke="#00ff00" stroke-width="2"/>
+  
+  <text x="50" y="115" fill="#00aa00" font-family="monospace" font-size="12">■ SECRET MESSAGE:</text>
+  <rect x="45" y="125" width="710" height="80" fill="#050a05" stroke="#004400" stroke-width="1" rx="2"/>
+  <text x="55" y="155" fill="#00ff00" font-family="monospace" font-size="14">
+    This is a secret message that will be
+  </text>
+  <text x="55" y="175" fill="#00ff00" font-family="monospace" font-size="14">
+    encrypted and converted to audio signal...
+  </text>
+  <text x="680" y="195" fill="#004400" font-family="monospace" font-size="10">78 chars</text>
+  
+  <!-- Encryption Key Panel -->
+  <rect x="30" y="235" width="740" height="80" fill="#0a150a" stroke="#00ff00" stroke-width="1" rx="3"/>
+  <text x="50" y="260" fill="#00aa00" font-family="monospace" font-size="12">■ ENCRYPTION KEY:</text>
+  <rect x="45" y="270" width="600" height="35" fill="#050a05" stroke="#004400" stroke-width="1" rx="2"/>
+  <text x="55" y="293" fill="#00ff00" font-family="monospace" font-size="14">••••••••••••••</text>
+  <rect x="655" y="270" width="100" height="35" fill="#001a00" stroke="#00ff00" stroke-width="1" rx="2"/>
+  <text x="705" y="293" text-anchor="middle" fill="#00ff00" font-family="monospace" font-size="11">👁 SHOW</text>
+  
+  <!-- Key Strength -->
+  <rect x="45" y="295" width="200" height="8" fill="#001a00" rx="2"/>
+  <rect x="45" y="295" width="160" height="8" fill="#00ff00" rx="2"/>
+  <text x="255" y="302" fill="#00ff00" font-family="monospace" font-size="10">STRONG (80%)</text>
+  
+  <!-- Action Buttons -->
+  <rect x="30" y="330" width="235" height="50" fill="#0a2a0a" stroke="#00ff00" stroke-width="2" rx="5"/>
+  <text x="147" y="360" text-anchor="middle" fill="#00ff00" font-family="monospace" font-size="14" font-weight="bold">🔐 ENCRYPT</text>
+  
+  <rect x="282" y="330" width="235" height="50" fill="#0a2a0a" stroke="#00ff00" stroke-width="2" rx="5"/>
+  <text x="400" y="360" text-anchor="middle" fill="#00ff00" font-family="monospace" font-size="14" font-weight="bold">▶ PLAY SIGNAL</text>
+  
+  <rect x="534" y="330" width="236" height="50" fill="#0a2a0a" stroke="#00ff00" stroke-width="2" rx="5"/>
+  <text x="652" y="360" text-anchor="middle" fill="#00ff00" font-family="monospace" font-size="14" font-weight="bold">💾 DOWNLOAD WAV</text>
+  
+  <!-- Oscilloscope Panel -->
+  <rect x="30" y="395" width="740" height="150" fill="#050a05" stroke="#00ff00" stroke-width="1" rx="3"/>
+  <text x="50" y="415" fill="#00aa00" font-family="monospace" font-size="12">■ SIGNAL WAVEFORM — OSCILLOSCOPE:</text>
+  
+  <!-- Grid -->
+  <g stroke="#003300" stroke-width="0.5">
+    <line x1="45" y1="440" x2="755" y2="440"/>
+    <line x1="45" y1="470" x2="755" y2="470"/>
+    <line x1="45" y1="500" x2="755" y2="500"/>
+    <line x1="45" y1="530" x2="755" y2="530"/>
+    <line x1="100" y1="425" x2="100" y2="535"/>
+    <line x1="200" y1="425" x2="200" y2="535"/>
+    <line x1="300" y1="425" x2="300" y2="535"/>
+    <line x1="400" y1="425" x2="400" y2="535"/>
+    <line x1="500" y1="425" x2="500" y2="535"/>
+    <line x1="600" y1="425" x2="600" y2="535"/>
+    <line x1="700" y1="425" x2="700" y2="535"/>
+  </g>
+  
+  <!-- Waveform -->
+  <path d="M45,470 Q60,430 75,470 T105,470 T135,470 Q150,510 165,470 T195,470 T225,470 Q240,430 255,470 T285,470 T315,470 Q330,510 345,470 T375,470 T405,470 Q420,430 435,470 T465,470 T495,470 Q510,510 525,470 T555,470 T585,470 Q600,430 615,470 T645,470 T675,470 Q690,510 705,470 T735,470 T755,470" 
+        fill="none" stroke="#00ff00" stroke-width="2" filter="url(#glowG)"/>
+  
+  <!-- Status -->
+  <rect x="620" y="425" width="130" height="25" fill="#002200" stroke="#00ff00" stroke-width="1" rx="2"/>
+  <text x="685" y="442" text-anchor="middle" fill="#00ff00" font-family="monospace" font-size="11">✓ READY</text>
+  
+  <!-- Footer -->
+  <text x="400" y="565" text-anchor="middle" fill="#00ff00" font-family="monospace" font-size="14" filter="url(#glowG)">
+    SETI@CryptoWave
+  </text>
+  <text x="400" y="585" text-anchor="middle" fill="#004400" font-family="monospace" font-size="10">
+    Designed &amp; Developed by Amir Saman Pirayeshfar
+  </text>
+</svg>

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <radialGradient id="bgGradRx" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#1a1a0a"/>
+      <stop offset="100%" style="stop-color:#0a0a05"/>
+    </radialGradient>
+    <filter id="glowA">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="scanRx" patternUnits="userSpaceOnUse" width="100%" height="4">
+      <rect width="100%" height="2" fill="rgba(50,50,0,0.1)"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#bgGradRx)"/>
+  <rect width="800" height="600" fill="url(#scanRx)"/>
+  
+  <!-- Border -->
+  <rect x="10" y="10" width="780" height="580" fill="none" stroke="#3a3a1a" stroke-width="2" rx="5"/>
+  
+  <!-- Header -->
+  <rect x="30" y="25" width="740" height="50" fill="none" stroke="#ffaa00" stroke-width="1" rx="3"/>
+  <text x="60" y="55" fill="#ffaa00" font-family="monospace" font-size="14">◄ BACK</text>
+  <text x="400" y="55" text-anchor="middle" fill="#ffaa00" font-family="monospace" font-size="20" font-weight="bold" filter="url(#glowA)">
+    📻 RECEIVER MODE — RX
+  </text>
+  <text x="720" y="55" text-anchor="middle" fill="#aa8800" font-family="monospace" font-size="10">■ STANDBY</text>
+  
+  <!-- Audio Input Panel -->
+  <rect x="30" y="90" width="740" height="90" fill="#151508" stroke="#ffaa00" stroke-width="1" rx="3"/>
+  <!-- Corner decorations -->
+  <path d="M30,100 L30,90 L40,90" fill="none" stroke="#ffaa00" stroke-width="2"/>
+  <path d="M770,100 L770,90 L760,90" fill="none" stroke="#ffaa00" stroke-width="2"/>
+  <path d="M30,170 L30,180 L40,180" fill="none" stroke="#ffaa00" stroke-width="2"/>
+  <path d="M770,170 L770,180 L760,180" fill="none" stroke="#ffaa00" stroke-width="2"/>
+  
+  <text x="50" y="115" fill="#aa8800" font-family="monospace" font-size="12">■ AUDIO INPUT SOURCE:</text>
+  
+  <rect x="45" y="125" width="340" height="45" fill="#1a1a08" stroke="#ffaa00" stroke-width="2" rx="5"/>
+  <text x="215" y="153" text-anchor="middle" fill="#ffaa00" font-family="monospace" font-size="14" font-weight="bold">📁 LOAD WAV FILE</text>
+  
+  <rect x="405" y="125" width="340" height="45" fill="#0a0a08" stroke="#aa8800" stroke-width="1" rx="5"/>
+  <text x="575" y="153" text-anchor="middle" fill="#aa8800" font-family="monospace" font-size="14">🎤 RECORD MIC</text>
+  
+  <!-- File Loaded Status -->
+  <rect x="30" y="195" width="740" height="35" fill="#0a1a08" stroke="#00aa00" stroke-width="1" rx="3"/>
+  <text x="50" y="218" fill="#00ff00" font-family="monospace" font-size="12">✓ FILE LOADED: secret_message.wav (2.3 sec, 44.1kHz)</text>
+  
+  <!-- Decryption Key Panel -->
+  <rect x="30" y="245" width="740" height="80" fill="#151508" stroke="#ffaa00" stroke-width="1" rx="3"/>
+  <text x="50" y="270" fill="#aa8800" font-family="monospace" font-size="12">■ DECRYPTION KEY:</text>
+  <rect x="45" y="280" width="600" height="35" fill="#0a0a05" stroke="#554400" stroke-width="1" rx="2"/>
+  <text x="55" y="303" fill="#ffaa00" font-family="monospace" font-size="14">••••••••••••••</text>
+  <rect x="655" y="280" width="100" height="35" fill="#1a1a00" stroke="#ffaa00" stroke-width="1" rx="2"/>
+  <text x="705" y="303" text-anchor="middle" fill="#ffaa00" font-family="monospace" font-size="11">👁 SHOW</text>
+  
+  <!-- Decrypt Button -->
+  <rect x="30" y="340" width="740" height="50" fill="#1a2a08" stroke="#ffaa00" stroke-width="2" rx="5"/>
+  <text x="400" y="370" text-anchor="middle" fill="#ffaa00" font-family="monospace" font-size="16" font-weight="bold" filter="url(#glowA)">🔓 DECRYPT MESSAGE</text>
+  
+  <!-- Decrypted Message Panel -->
+  <rect x="30" y="405" width="740" height="140" fill="#0a150a" stroke="#00ff00" stroke-width="2" rx="3"/>
+  <!-- Corner decorations -->
+  <path d="M30,415 L30,405 L40,405" fill="none" stroke="#00ff00" stroke-width="2"/>
+  <path d="M770,415 L770,405 L760,405" fill="none" stroke="#00ff00" stroke-width="2"/>
+  <path d="M30,535 L30,545 L40,545" fill="none" stroke="#00ff00" stroke-width="2"/>
+  <path d="M770,535 L770,545 L760,545" fill="none" stroke="#00ff00" stroke-width="2"/>
+  
+  <text x="50" y="428" fill="#00aa00" font-family="monospace" font-size="12">■ DECRYPTED MESSAGE:</text>
+  <rect x="45" y="438" width="710" height="80" fill="#001a00" stroke="#004400" stroke-width="1" rx="2"/>
+  
+  <!-- Success Message -->
+  <text x="55" y="468" fill="#00ff00" font-family="monospace" font-size="16" filter="url(#glowA)">
+    This is a secret message that will be
+  </text>
+  <text x="55" y="493" fill="#00ff00" font-family="monospace" font-size="16" filter="url(#glowA)">
+    encrypted and converted to audio signal...
+  </text>
+  
+  <!-- Copy Button -->
+  <rect x="620" y="520" width="120" height="25" fill="#002200" stroke="#00ff00" stroke-width="1" rx="3"/>
+  <text x="680" y="537" text-anchor="middle" fill="#00ff00" font-family="monospace" font-size="11">📋 COPY</text>
+  
+  <!-- Status Badge -->
+  <rect x="45" y="520" width="150" height="25" fill="#003300" stroke="#00ff00" stroke-width="1" rx="3"/>
+  <text x="120" y="537" text-anchor="middle" fill="#00ff00" font-family="monospace" font-size="11">✓ DECRYPTED OK</text>
+  
+  <!-- Footer -->
+  <text x="400" y="565" text-anchor="middle" fill="#ffaa00" font-family="monospace" font-size="14" filter="url(#glowA)">
+    SETI@CryptoWave
+  </text>
+  <text x="400" y="585" text-anchor="middle" fill="#554400" font-family="monospace" font-size="10">
+    Designed &amp; Developed by Amir Saman Pirayeshfar
+  </text>
+</svg>

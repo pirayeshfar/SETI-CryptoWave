@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <radialGradient id="radarGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#0a1a0a"/>
+      <stop offset="100%" style="stop-color:#050a05"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="scanlines" patternUnits="userSpaceOnUse" width="100%" height="4">
+      <rect width="100%" height="2" fill="rgba(0,50,0,0.1)"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="800" height="600" fill="url(#radarGlow)"/>
+  <rect width="800" height="600" fill="url(#scanlines)"/>
+  
+  <!-- Border -->
+  <rect x="10" y="10" width="780" height="580" fill="none" stroke="#1a3a1a" stroke-width="2" rx="5"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" fill="#00ff00" font-family="monospace" font-size="28" font-weight="bold" filter="url(#glow)">
+    SETI@CryptoWave
+  </text>
+  <text x="400" y="75" text-anchor="middle" fill="#00aa00" font-family="monospace" font-size="14">
+    ■ CLASSIFIED ■ SECURE AUDIO TRANSMISSION SYSTEM
+  </text>
+  
+  <!-- Radar Circle -->
+  <circle cx="400" cy="280" r="150" fill="none" stroke="#00ff00" stroke-width="1" opacity="0.3"/>
+  <circle cx="400" cy="280" r="100" fill="none" stroke="#00ff00" stroke-width="1" opacity="0.3"/>
+  <circle cx="400" cy="280" r="50" fill="none" stroke="#00ff00" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Radar Lines -->
+  <line x1="250" y1="280" x2="550" y2="280" stroke="#00ff00" stroke-width="1" opacity="0.3"/>
+  <line x1="400" y1="130" x2="400" y2="430" stroke="#00ff00" stroke-width="1" opacity="0.3"/>
+  <line x1="294" y1="174" x2="506" y2="386" stroke="#00ff00" stroke-width="1" opacity="0.3"/>
+  <line x1="294" y1="386" x2="506" y2="174" stroke="#00ff00" stroke-width="1" opacity="0.3"/>
+  
+  <!-- Radar Sweep -->
+  <path d="M400,280 L400,130 A150,150 0 0,1 506,174 Z" fill="#00ff00" opacity="0.15"/>
+  
+  <!-- Blips -->
+  <circle cx="450" cy="220" r="4" fill="#00ff00" filter="url(#glow)"/>
+  <circle cx="350" cy="320" r="3" fill="#00ff00" filter="url(#glow)" opacity="0.7"/>
+  <circle cx="480" cy="300" r="3" fill="#00ff00" filter="url(#glow)" opacity="0.5"/>
+  
+  <!-- Center Dot -->
+  <circle cx="400" cy="280" r="3" fill="#00ff00" filter="url(#glow)"/>
+  
+  <!-- Mode Selection Buttons -->
+  <!-- TX Button -->
+  <rect x="150" y="470" width="200" height="60" fill="#0a2a0a" stroke="#00ff00" stroke-width="2" rx="5"/>
+  <text x="250" y="505" text-anchor="middle" fill="#00ff00" font-family="monospace" font-size="20" font-weight="bold">
+    📡 TX MODE
+  </text>
+  <text x="250" y="520" text-anchor="middle" fill="#00aa00" font-family="monospace" font-size="10">
+    TRANSMITTER
+  </text>
+  
+  <!-- RX Button -->
+  <rect x="450" y="470" width="200" height="60" fill="#1a1a0a" stroke="#ffaa00" stroke-width="2" rx="5"/>
+  <text x="550" y="505" text-anchor="middle" fill="#ffaa00" font-family="monospace" font-size="20" font-weight="bold">
+    📻 RX MODE
+  </text>
+  <text x="550" y="520" text-anchor="middle" fill="#aa8800" font-family="monospace" font-size="10">
+    RECEIVER
+  </text>
+  
+  <!-- Test Button -->
+  <rect x="300" y="545" width="200" height="30" fill="#0a0a1a" stroke="#00aaff" stroke-width="1" rx="3"/>
+  <text x="400" y="565" text-anchor="middle" fill="#00aaff" font-family="monospace" font-size="12">
+    🧪 QUICK SYSTEM TEST
+  </text>
+  
+  <!-- Footer -->
+  <text x="400" y="590" text-anchor="middle" fill="#004400" font-family="monospace" font-size="10">
+    Designed &amp; Developed by Amir Saman Pirayeshfar
+  </text>
+</svg>
